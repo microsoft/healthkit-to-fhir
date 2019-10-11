@@ -1,0 +1,12 @@
+//
+//  Configurations.swift
+//  HealthKitToFhir
+//
+//  Copyright (c) Microsoft Corporation.
+//  Licensed under the MIT License.
+
+/// This class is auto-generated. Edits to this file will be overwritten during the build process.
+/// To make changes to the default configuration, edit the DefaultObservationFactoryConfig.json file.
+internal struct Configurations {
+    internal static let defaultConfig = "DEFAULT_CONFIG"
+}

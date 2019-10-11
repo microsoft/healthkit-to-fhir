@@ -1,0 +1,15 @@
+{
+    "HKQuantityTypeIdentifierH
+        "coding": [
+                {
+                    "s"8867-4",
+                    "display": "Heart rate"
+                }
+            ]
+        },
+        "valueQuantity" : {
+            "unitttp://unitsofmeasure.org",
+            "code" : "{beats}/min"
+        }
+
+}

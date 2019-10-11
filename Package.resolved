@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FHIR",
+        "repositoryURL": "https://github.com/smart-on-fhir/Swift-FHIR",
+        "state": {
+          "branch": null,
+          "revision": "626ffd15ebbf6de6aa7e130b2708f47211216d62",
+          "version": "4.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
