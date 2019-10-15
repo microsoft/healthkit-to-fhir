@@ -8,7 +8,7 @@ The HealthKitToFhir Swift Library provides a simple way to create FHIR Resources
 
 ### Create the factory
 
-Resources are created using "Factory" classes that can be initialized with an optional JSON configuration to provide additional data used to decorate the Resource. In the example below, an observation factory is initialized with no configuration.
+Resources are created using "Factory" classes that can be initialized with an optional JSON configuration to provide additional conversion data used to decorate the Resource. In the example below, an observation factory is initialized with no configuration.
 
 ```swift
 do {
@@ -32,7 +32,7 @@ do {
 
 ### Observations
 
-Additional observation conversions can be added by providing a custom configuration to the ObservationFactory when it is initialized.
+Additional observation conversions can be added by providing a custom configuration to the ObservationFactory when it is initialized at runtime.
 
 - HKQuantityTypeIdentifierHeartRate
 - HKCorrelationTypeIdentifierBloodPressure
@@ -43,7 +43,32 @@ Additional observation conversions can be added by providing a custom configurat
 
 ### Devices
 
-The DeviceFactory will extract data provided in HKObject device and sourceRevision properties to create a Device Resource.
+The DeviceFactory will extract data provided in HKObject device and sourceRevision properties to create a Device Resource. No configuration is required for this conversion.
+
+## Adding support for new conversions
+
+HealthKitToFhir uses JSON configuration files to provide additional data required to perform conversions from HealthKit HKObjects to FHIR Resources. The [DefaultObservationFactoryConfig.json](Sources/Configuration/DefaultObservationFactoryConfig.json) contains conversion data for the [ObservationFactory](Sources/Factories.ObservationFactory.swift) class to support the types listed above.
+
+The example below shows data used for converting an HKQuantitySample containing a Blood Glucose reading to a FHIR Resource. The HKObject type identifier is used to look up data required to populate the Observation, this includes the code and valueQuantity properties of the Blood Glucose Observation. This "static" data will be "copied" to the Observation during the conversion process, while values like the measurement, date, and identifier will be converted from properties of the HKObject.
+
+```json
+"HKQuantityTypeIdentifierBloodGlucose": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "41653-7",
+                    "display": "Glucose Glucometer (BldC) [Mass/Vol]"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "mg/dL",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mg/dL"
+        }
+    }
+```
 
 ## Contributing
 
