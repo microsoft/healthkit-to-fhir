@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5094B1C23391C6C006264D2 /* FHIR in Frameworks */ = {isa = PBXBuildFile; productRef = A5094B1B23391C6C006264D2 /* FHIR */; };
+		A5094B3723391EC7006264D2 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A5094B3623391EC7006264D2 /* Nimble */; };
+		A5094B3A23391EE1006264D2 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = A5094B3923391EE1006264D2 /* Quick */; };
+		A538263D233BD03800D454CD /* DefaultObservationFactoryConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = A5382631233BD03800D454CD /* DefaultObservationFactoryConfig.json */; };
+		A538263E233BD03800D454CD /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382632233BD03800D454CD /* Configurations.swift */; };
+		A538263F233BD03800D454CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382634233BD03800D454CD /* Constants.swift */; };
+		A5382640233BD03800D454CD /* ObservationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382636233BD03800D454CD /* ObservationFactory.swift */; };
+		A5382641233BD03800D454CD /* ResourceFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382637233BD03800D454CD /* ResourceFactoryProtocol.swift */; };
+		A5382642233BD03800D454CD /* DeviceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382638233BD03800D454CD /* DeviceFactory.swift */; };
+		A5382643233BD03800D454CD /* FactoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382639233BD03800D454CD /* FactoryBase.swift */; };
+		A5382644233BD03800D454CD /* ConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538263B233BD03800D454CD /* ConversionError.swift */; };
+		A5382645233BD03800D454CD /* ConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538263C233BD03800D454CD /* ConfigurationError.swift */; };
+		A55FD8CF2304B30F003E6220 /* ObservationConversionTestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */; };
+		A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */; };
+		A55FD8D32305A626003E6220 /* StepCountConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */; };
+		A586892C22AAFB2C00584468 /* ObservationFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586892B22AAFB2C00584468 /* ObservationFactoryTests.swift */; };
+		A586892E22AB04D200584468 /* TestConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = A586892D22AB04D200584468 /* TestConfig.json */; };
+		A586893022AB07D100584468 /* InvalidConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = A586892F22AB07D100584468 /* InvalidConfig.json */; };
+		A586893322AB0A2400584468 /* HeartRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586893222AB0A2400584468 /* HeartRateConversionTests.swift */; };
+		A586893522AB194F00584468 /* BloodPressureConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586893422AB194F00584468 /* BloodPressureConversionTests.swift */; };
+		A5D5CB0C231ECA0600532768 /* DeviceFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D5CB0B231ECA0600532768 /* DeviceFactoryTests.swift */; };
+		A5D5CB0F2320102900532768 /* HKObject in Resources */ = {isa = PBXBuildFile; fileRef = A5D5CB0E2320102900532768 /* HKObject */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		607FACE51AFB9204008FA782 /* HealthKitToFhir_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthKitToFhir_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5382631233BD03800D454CD /* DefaultObservationFactoryConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultObservationFactoryConfig.json; sourceTree = "<group>"; };
+		A5382632233BD03800D454CD /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		A5382634233BD03800D454CD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A5382636233BD03800D454CD /* ObservationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationFactory.swift; sourceTree = "<group>"; };
+		A5382637233BD03800D454CD /* ResourceFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceFactoryProtocol.swift; sourceTree = "<group>"; };
+		A5382638233BD03800D454CD /* DeviceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceFactory.swift; sourceTree = "<group>"; };
+		A5382639233BD03800D454CD /* FactoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryBase.swift; sourceTree = "<group>"; };
+		A538263B233BD03800D454CD /* ConversionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionError.swift; sourceTree = "<group>"; };
+		A538263C233BD03800D454CD /* ConfigurationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationError.swift; sourceTree = "<group>"; };
+		A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationConversionTestConfiguration.swift; sourceTree = "<group>"; };
+		A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodGlucoseConversionTests.swift; sourceTree = "<group>"; };
+		A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountConversionTests.swift; sourceTree = "<group>"; };
+		A586892B22AAFB2C00584468 /* ObservationFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationFactoryTests.swift; sourceTree = "<group>"; };
+		A586892D22AB04D200584468 /* TestConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestConfig.json; sourceTree = "<group>"; };
+		A586892F22AB07D100584468 /* InvalidConfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidConfig.json; sourceTree = "<group>"; };
+		A586893222AB0A2400584468 /* HeartRateConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateConversionTests.swift; sourceTree = "<group>"; };
+		A586893422AB194F00584468 /* BloodPressureConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureConversionTests.swift; sourceTree = "<group>"; };
+		A5D5CB0B231ECA0600532768 /* DeviceFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFactoryTests.swift; sourceTree = "<group>"; };
+		A5D5CB0E2320102900532768 /* HKObject */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = HKObject; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		607FACE21AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5094B3A23391EE1006264D2 /* Quick in Frameworks */,
+				A5094B1C23391C6C006264D2 /* FHIR in Frameworks */,
+				A5094B3723391EC7006264D2 /* Nimble in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				607FACE81AFB9204008FA782 /* Tests */,
+				A538262F233BD03800D454CD /* Sources */,
+				607FACD11AFB9204008FA782 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACE51AFB9204008FA782 /* HealthKitToFhir_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACE81AFB9204008FA782 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A5D5CB0D23200FCD00532768 /* TestData */,
+				A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */,
+				A586893422AB194F00584468 /* BloodPressureConversionTests.swift */,
+				A586893222AB0A2400584468 /* HeartRateConversionTests.swift */,
+				A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */,
+				A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */,
+				A586892B22AAFB2C00584468 /* ObservationFactoryTests.swift */,
+				A5D5CB0B231ECA0600532768 /* DeviceFactoryTests.swift */,
+				A586893122AB09EB00584468 /* Configs */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEA1AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A538262F233BD03800D454CD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A5382630233BD03800D454CD /* Configuration */,
+				A5382633233BD03800D454CD /* Constants */,
+				A5382635233BD03800D454CD /* Factories */,
+				A538263A233BD03800D454CD /* Errors */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A5382630233BD03800D454CD /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A5382631233BD03800D454CD /* DefaultObservationFactoryConfig.json */,
+				A5382632233BD03800D454CD /* Configurations.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		A5382633233BD03800D454CD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A5382634233BD03800D454CD /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A5382635233BD03800D454CD /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				A5382636233BD03800D454CD /* ObservationFactory.swift */,
+				A5382637233BD03800D454CD /* ResourceFactoryProtocol.swift */,
+				A5382638233BD03800D454CD /* DeviceFactory.swift */,
+				A5382639233BD03800D454CD /* FactoryBase.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		A538263A233BD03800D454CD /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A538263B233BD03800D454CD /* ConversionError.swift */,
+				A538263C233BD03800D454CD /* ConfigurationError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A586893122AB09EB00584468 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				A586892F22AB07D100584468 /* InvalidConfig.json */,
+				A586892D22AB04D200584468 /* TestConfig.json */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		A5D5CB0D23200FCD00532768 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				A5D5CB0E2320102900532768 /* HKObject */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		607FACE41AFB9204008FA782 /* HealthKitToFhir_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "HealthKitToFhir_Tests" */;
+			buildPhases = (
+				A5382646233BD77700D454CD /* ShellScript */,
+				607FACE11AFB9204008FA782 /* Sources */,
+				607FACE21AFB9204008FA782 /* Frameworks */,
+				607FACE31AFB9204008FA782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthKitToFhir_Tests;
+			packageProductDependencies = (
+				A5094B1B23391C6C006264D2 /* FHIR */,
+				A5094B3623391EC7006264D2 /* Nimble */,
+				A5094B3923391EE1006264D2 /* Quick */,
+			);
+			productName = Tests;
+			productReference = 607FACE51AFB9204008FA782 /* HealthKitToFhir_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 1100;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "HealthKitToFhir" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			packageReferences = (
+				A5094B1A23391C6C006264D2 /* XCRemoteSwiftPackageReference "Swift-FHIR" */,
+				A5094B3523391EC6006264D2 /* XCRemoteSwiftPackageReference "Nimble" */,
+				A5094B3823391EE1006264D2 /* XCRemoteSwiftPackageReference "Quick" */,
+			);
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACE41AFB9204008FA782 /* HealthKitToFhir_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A586892E22AB04D200584468 /* TestConfig.json in Resources */,
+				A586893022AB07D100584468 /* InvalidConfig.json in Resources */,
+				A5D5CB0F2320102900532768 /* HKObject in Resources */,
+				A538263D233BD03800D454CD /* DefaultObservationFactoryConfig.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5382646233BD77700D454CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/GenerateConfigurations.sh",
+				"$(SRCROOT)/Sources/Configuration/DefaultObservationFactoryConfig.json",
+				"$(SRCROOT)/Scripts/ConfigurationsTemplate",
+				"$(SRCROOT)/Sources/Configuration/Configurations.swift",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "sh $SCRIPT_INPUT_FILE_0 $SCRIPT_INPUT_FILE_1 $SCRIPT_INPUT_FILE_2 $SCRIPT_INPUT_FILE_3\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		607FACE11AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */,
+				A5382640233BD03800D454CD /* ObservationFactory.swift in Sources */,
+				A5382642233BD03800D454CD /* DeviceFactory.swift in Sources */,
+				A5382641233BD03800D454CD /* ResourceFactoryProtocol.swift in Sources */,
+				A5382644233BD03800D454CD /* ConversionError.swift in Sources */,
+				A586893322AB0A2400584468 /* HeartRateConversionTests.swift in Sources */,
+				A586893522AB194F00584468 /* BloodPressureConversionTests.swift in Sources */,
+				A55FD8D32305A626003E6220 /* StepCountConversionTests.swift in Sources */,
+				A586892C22AAFB2C00584468 /* ObservationFactoryTests.swift in Sources */,
+				A5382645233BD03800D454CD /* ConfigurationError.swift in Sources */,
+				A55FD8CF2304B30F003E6220 /* ObservationConversionTestConfiguration.swift in Sources */,
+				A538263E233BD03800D454CD /* Configurations.swift in Sources */,
+				A5D5CB0C231ECA0600532768 /* DeviceFactoryTests.swift in Sources */,
+				A538263F233BD03800D454CD /* Constants.swift in Sources */,
+				A5382643233BD03800D454CD /* FactoryBase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF31AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		607FACF41AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "HealthKitToFhir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "HealthKitToFhir_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF31AFB9204008FA782 /* Debug */,
+				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5094B1A23391C6C006264D2 /* XCRemoteSwiftPackageReference "Swift-FHIR" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/smart-on-fhir/Swift-FHIR.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		A5094B3523391EC6006264D2 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = exactVersion;
+				version = 8.0.2;
+			};
+		};
+		A5094B3823391EE1006264D2 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5094B1B23391C6C006264D2 /* FHIR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5094B1A23391C6C006264D2 /* XCRemoteSwiftPackageReference "Swift-FHIR" */;
+			productName = FHIR;
+		};
+		A5094B3623391EC7006264D2 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5094B3523391EC6006264D2 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		A5094B3923391EE1006264D2 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5094B3823391EE1006264D2 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}

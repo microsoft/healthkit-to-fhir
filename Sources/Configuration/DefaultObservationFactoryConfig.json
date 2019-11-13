@@ -1,0 +1,98 @@
+{
+    "HKQuantityTypeIdentifierHeartRate": {
+        "code": {
+            "coding": [
+                {
+                    "system" : "http://loinc.org",
+                    "code": "8867-4",
+                    "display": "Heart rate"
+                }
+            ]
+        },
+        "valueQuantity" : {
+            "unit" : "count/min",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{beats}/min"
+        }
+    },
+    "HKCorrelationTypeIdentifierBloodPressure": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "85354-9",
+                    "display": "Blood pressure panel"
+                }
+            ]
+        }
+    },
+    "HKQuantityTypeIdentifierBloodPressureDiastolic": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "8462-4",
+                    "display": "Diastolic blood pressure"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "mmHg",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mmHg"
+        }
+    },
+    "HKQuantityTypeIdentifierBloodPressureSystolic": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "8480-6",
+                    "display": "Systolic blood pressure"
+                },
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "271649006",
+                    "display": "Systolic blood pressure"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "mmHg",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mmHg"
+        }
+    },
+    "HKQuantityTypeIdentifierStepCount": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "55423-8",
+                    "display": "Number of steps"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "count",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "{tot}"
+        }
+    },
+    "HKQuantityTypeIdentifierBloodGlucose": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "41653-7",
+                    "display": "Glucose Glucometer (BldC) [Mass/Vol]"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "mg/dL",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "mg/dL"
+        }
+    }
+}
