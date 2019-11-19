@@ -4,6 +4,14 @@
 
 The HealthKitToFhir Swift Library provides a simple way to create FHIR® Resources from HKObjects.
 
+## Installation
+
+HealthKitToFhir uses **Swift Package Manager** to manage dependencies. It is recommended that you use Xcode 11 or newer to add HealthKitToFhir to your project.
+
+1. Using Xcode 11 go to File > Swift Packages > Add Package Dependency
+2. Paste the project URL: https://github.com/microsoft/healthkit-to-fhir
+3. Click on next and select the project target
+
 ## Basic Usage
 
 ### Create the factory
