@@ -12,7 +12,7 @@
         "valueQuantity" : {
             "unit" : "count/min",
             "system" : "http://unitsofmeasure.org",
-            "code" : "{beats}/min"
+            "code" : "/min"
         }
     },
     "HKCorrelationTypeIdentifierBloodPressure": {
@@ -98,16 +98,16 @@
     "HKQuantityTypeIdentifierOxygenSaturation": {
         "code": {
             "coding": [
-              {
-                "system": "http://loinc.org",
-                "code": "2708-6",
-                "display": "Oxygen saturation in Arterial blood"
-              },
-              {
-                "system": "http://loinc.org",
-                "code": "59408-5",
-                "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
-              }
+                {
+                    "system": "http://loinc.org",
+                    "code": "2708-6",
+                    "display": "Oxygen saturation in Arterial blood"
+                },
+                {
+                    "system": "http://loinc.org",
+                    "code": "59408-5",
+                    "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+                }
             ]
         },
         "valueQuantity": {
@@ -118,23 +118,23 @@
     },
     "HKQuantityTypeIdentifierBodyMass": {
         "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "29463-7",
-              "display": "Body weight"
-            },
-            {
-              "system": "http://loinc.org",
-              "code": "3141-9",
-              "display": "Body weight measured"
-            },
-            {
-              "system": "http://snomed.info/sct",
-              "code": "27113001",
-              "display": "Body weight"
-            }
-          ]
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "29463-7",
+                    "display": "Body weight"
+                },
+                {
+                    "system": "http://loinc.org",
+                    "code": "3141-9",
+                    "display": "Body weight measured"
+                },
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "27113001",
+                    "display": "Body weight"
+                }
+            ]
         },
         "valueQuantity": {
             "unit" : "lb",
@@ -144,18 +144,34 @@
     },
     "HKQuantityTypeIdentifierBodyTemperature": {
         "code": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "8310-5",
-              "display": "Body temperature"
-            }
-          ]
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "8310-5",
+                    "display": "Body temperature"
+                }
+            ]
         },
         "valueQuantity": {
             "unit" : "degC",
             "system" : "http://unitsofmeasure.org",
             "code" : "Cel"
+        }
+    },
+    "HKQuantityTypeIdentifierRespiratoryRate": {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "9279-1",
+                    "display": "Respiratory rate"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "count/min",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "/min"
         }
     }
 }
