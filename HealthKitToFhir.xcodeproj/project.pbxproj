@@ -19,6 +19,11 @@
 		A5382643233BD03800D454CD /* FactoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382639233BD03800D454CD /* FactoryBase.swift */; };
 		A5382644233BD03800D454CD /* ConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538263B233BD03800D454CD /* ConversionError.swift */; };
 		A5382645233BD03800D454CD /* ConfigurationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538263C233BD03800D454CD /* ConfigurationError.swift */; };
+		A55925DA2440CE050014A28A /* OxygenSaturationConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925D92440CE050014A28A /* OxygenSaturationConversionTests.swift */; };
+		A55925DC2440D6C20014A28A /* BodyMassConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */; };
+		A55925DE2440D93C0014A28A /* BodyTemperatureConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */; };
+		A55925E02441180D0014A28A /* RespiratoryRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */; };
+		A559260F2444D4AA0014A28A /* HeightConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559260E2444D4AA0014A28A /* HeightConversionTests.swift */; };
 		A55FD8CF2304B30F003E6220 /* ObservationConversionTestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */; };
 		A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */; };
 		A55FD8D32305A626003E6220 /* StepCountConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */; };
@@ -43,6 +48,11 @@
 		A5382639233BD03800D454CD /* FactoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryBase.swift; sourceTree = "<group>"; };
 		A538263B233BD03800D454CD /* ConversionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionError.swift; sourceTree = "<group>"; };
 		A538263C233BD03800D454CD /* ConfigurationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationError.swift; sourceTree = "<group>"; };
+		A55925D92440CE050014A28A /* OxygenSaturationConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OxygenSaturationConversionTests.swift; sourceTree = "<group>"; };
+		A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMassConversionTests.swift; sourceTree = "<group>"; };
+		A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTemperatureConversionTests.swift; sourceTree = "<group>"; };
+		A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryRateConversionTests.swift; sourceTree = "<group>"; };
+		A559260E2444D4AA0014A28A /* HeightConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightConversionTests.swift; sourceTree = "<group>"; };
 		A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationConversionTestConfiguration.swift; sourceTree = "<group>"; };
 		A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodGlucoseConversionTests.swift; sourceTree = "<group>"; };
 		A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountConversionTests.swift; sourceTree = "<group>"; };
@@ -92,8 +102,13 @@
 				A5D5CB0D23200FCD00532768 /* TestData */,
 				A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */,
 				A586893422AB194F00584468 /* BloodPressureConversionTests.swift */,
+				A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */,
+				A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */,
 				A586893222AB0A2400584468 /* HeartRateConversionTests.swift */,
+				A559260E2444D4AA0014A28A /* HeightConversionTests.swift */,
+				A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */,
 				A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */,
+				A55925D92440CE050014A28A /* OxygenSaturationConversionTests.swift */,
 				A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */,
 				A586892B22AAFB2C00584468 /* ObservationFactoryTests.swift */,
 				A5D5CB0B231ECA0600532768 /* DeviceFactoryTests.swift */,
@@ -284,19 +299,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A559260F2444D4AA0014A28A /* HeightConversionTests.swift in Sources */,
 				A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */,
 				A5382640233BD03800D454CD /* ObservationFactory.swift in Sources */,
 				A5382642233BD03800D454CD /* DeviceFactory.swift in Sources */,
 				A5382641233BD03800D454CD /* ResourceFactoryProtocol.swift in Sources */,
 				A5382644233BD03800D454CD /* ConversionError.swift in Sources */,
+				A55925DA2440CE050014A28A /* OxygenSaturationConversionTests.swift in Sources */,
 				A586893322AB0A2400584468 /* HeartRateConversionTests.swift in Sources */,
+				A55925DC2440D6C20014A28A /* BodyMassConversionTests.swift in Sources */,
 				A586893522AB194F00584468 /* BloodPressureConversionTests.swift in Sources */,
 				A55FD8D32305A626003E6220 /* StepCountConversionTests.swift in Sources */,
 				A586892C22AAFB2C00584468 /* ObservationFactoryTests.swift in Sources */,
 				A5382645233BD03800D454CD /* ConfigurationError.swift in Sources */,
 				A55FD8CF2304B30F003E6220 /* ObservationConversionTestConfiguration.swift in Sources */,
 				A538263E233BD03800D454CD /* Configurations.swift in Sources */,
+				A55925DE2440D93C0014A28A /* BodyTemperatureConversionTests.swift in Sources */,
 				A5D5CB0C231ECA0600532768 /* DeviceFactoryTests.swift in Sources */,
+				A55925E02441180D0014A28A /* RespiratoryRateConversionTests.swift in Sources */,
 				A538263F233BD03800D454CD /* Constants.swift in Sources */,
 				A5382643233BD03800D454CD /* FactoryBase.swift in Sources */,
 			);

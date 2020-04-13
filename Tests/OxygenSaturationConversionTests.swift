@@ -1,9 +1,11 @@
 //
-//  HeartRateConversionTests.swift
+//  OxygenSaturationConversionTests.swift
 //  HealthKitToFhir_Tests
 //
 //  Copyright (c) Microsoft Corporation.
 //  Licensed under the MIT License.
+
+import Foundation
 
 import Foundation
 import Quick
@@ -11,18 +13,23 @@ import Nimble
 import HealthKit
 import FHIR
 
-class HeartRateConversionSpec : QuickSpec {
+class OxygenSaturationConversionSpec : QuickSpec {
     override func spec() {
-        describe("a heart rate sample conversion") {
+        describe("an oxygen saturation sample conversion") {
             context("the output FHIR Observation") {
                 let expectedDate = Date.init(timeIntervalSince1970: 0)
                 
-                let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .heartRate)!, quantity: HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: 70), start: expectedDate, end: expectedDate)
+                let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .oxygenSaturation)!, quantity: HKQuantity(unit: HKUnit(from: "%"), doubleValue: 98), start: expectedDate, end: expectedDate)
                 
-                let expectedCoding = Coding()
-                expectedCoding.code = FHIRString("8867-4")
-                expectedCoding.display = FHIRString("Heart rate")
-                expectedCoding.system = FHIRURL("http://loinc.org")
+                let expectedCoding1 = Coding()
+                expectedCoding1.code = FHIRString("2708-6")
+                expectedCoding1.display = FHIRString("Oxygen saturation in Arterial blood")
+                expectedCoding1.system = FHIRURL("http://loinc.org")
+                
+                let expectedCoding2 = Coding()
+                expectedCoding2.code = FHIRString("59408-5")
+                expectedCoding2.display = FHIRString("Oxygen saturation in Arterial blood by Pulse oximetry")
+                expectedCoding2.system = FHIRURL("http://loinc.org")
                 
                 let expectedIdentifier = Identifier()
                 expectedIdentifier.system = FHIRURL("com.apple.health")
@@ -33,15 +40,15 @@ class HeartRateConversionSpec : QuickSpec {
                     let observation = try! observationFactory!.observation(from: sample)
                     
                     itBehavesLike("observation resource") { ["observation" : observation,
-                                                             "codings" : [expectedCoding],
+                                                             "codings" : [expectedCoding1, expectedCoding2],
                                                              "effectiveDateTime" : expectedDate,
                                                              "identifers" : [expectedIdentifier]]
                     }
                     it("includes the expected value") {
                         if let value = observation.valueQuantity{
-                            expect(value.value) == 70
-                            expect(value.code) == "/min"
-                            expect(value.unit) == "count/min"
+                            expect(value.value) == 98
+                            expect(value.code) == "%"
+                            expect(value.unit) == "%"
                             expect(value.system?.absoluteString) == "http://unitsofmeasure.org"
                         } else {
                             fail()
@@ -52,15 +59,15 @@ class HeartRateConversionSpec : QuickSpec {
                         let observation: Observation = try! observationFactory!.resource(from: sample)
                         
                         itBehavesLike("observation resource") { ["observation" : observation,
-                                                                 "codings" : [expectedCoding],
+                                                                 "codings" : [expectedCoding1, expectedCoding2],
                                                                  "effectiveDateTime" : expectedDate,
                                                                  "identifers" : [expectedIdentifier]]
                         }
                         it("includes the expected value") {
                             if let value = observation.valueQuantity{
-                                expect(value.value) == 70
-                                expect(value.code) == "/min"
-                                expect(value.unit) == "count/min"
+                                expect(value.value) == 98
+                                expect(value.code) == "%"
+                                expect(value.unit) == "%"
                                 expect(value.system?.absoluteString) == "http://unitsofmeasure.org"
                             } else {
                                 fail()
@@ -72,7 +79,7 @@ class HeartRateConversionSpec : QuickSpec {
                                 expect {
                                     let observation: Device? = try observationFactory?.resource(from: sample)
                                     return observation
-                                }.to(throwError(ConversionError.incorrectTypeForFactory))
+                                    }.to(throwError(ConversionError.incorrectTypeForFactory))
                             }
                         }
                     }

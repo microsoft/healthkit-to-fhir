@@ -1,5 +1,5 @@
 //
-//  HeartRateConversionTests.swift
+//  RespiratoryRateConversionTests.swift
 //  HealthKitToFhir_Tests
 //
 //  Copyright (c) Microsoft Corporation.
@@ -11,17 +11,17 @@ import Nimble
 import HealthKit
 import FHIR
 
-class HeartRateConversionSpec : QuickSpec {
+class RespiratoryRateConversionSpec : QuickSpec {
     override func spec() {
-        describe("a heart rate sample conversion") {
+        describe("a respiratory rate sample conversion") {
             context("the output FHIR Observation") {
                 let expectedDate = Date.init(timeIntervalSince1970: 0)
                 
-                let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .heartRate)!, quantity: HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: 70), start: expectedDate, end: expectedDate)
+                let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .respiratoryRate)!, quantity: HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: 20), start: expectedDate, end: expectedDate)
                 
                 let expectedCoding = Coding()
-                expectedCoding.code = FHIRString("8867-4")
-                expectedCoding.display = FHIRString("Heart rate")
+                expectedCoding.code = FHIRString("9279-1")
+                expectedCoding.display = FHIRString("Respiratory rate")
                 expectedCoding.system = FHIRURL("http://loinc.org")
                 
                 let expectedIdentifier = Identifier()
@@ -39,7 +39,7 @@ class HeartRateConversionSpec : QuickSpec {
                     }
                     it("includes the expected value") {
                         if let value = observation.valueQuantity{
-                            expect(value.value) == 70
+                            expect(value.value) == 20
                             expect(value.code) == "/min"
                             expect(value.unit) == "count/min"
                             expect(value.system?.absoluteString) == "http://unitsofmeasure.org"
@@ -58,7 +58,7 @@ class HeartRateConversionSpec : QuickSpec {
                         }
                         it("includes the expected value") {
                             if let value = observation.valueQuantity{
-                                expect(value.value) == 70
+                                expect(value.value) == 20
                                 expect(value.code) == "/min"
                                 expect(value.unit) == "count/min"
                                 expect(value.system?.absoluteString) == "http://unitsofmeasure.org"
