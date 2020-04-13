@@ -48,6 +48,11 @@ Additional observation conversions can be added by providing a custom configurat
 - HKQuantityTypeIdentifierBloodPressureSystolic
 - HKQuantityTypeIdentifierStepCount
 - HKQuantityTypeIdentifierBloodGlucose
+- HKQuantityTypeIdentifierOxygenSaturation
+- HKQuantityTypeIdentifierBodyMass
+- HKQuantityTypeIdentifierBodyTemperature
+- HKQuantityTypeIdentifierRespiratoryRate
+- HKQuantityTypeIdentifierHeight
 
 ### Devices
 
