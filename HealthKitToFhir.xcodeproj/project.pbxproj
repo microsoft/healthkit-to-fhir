@@ -23,6 +23,7 @@
 		A55925DC2440D6C20014A28A /* BodyMassConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */; };
 		A55925DE2440D93C0014A28A /* BodyTemperatureConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */; };
 		A55925E02441180D0014A28A /* RespiratoryRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */; };
+		A559260F2444D4AA0014A28A /* HeightConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A559260E2444D4AA0014A28A /* HeightConversionTests.swift */; };
 		A55FD8CF2304B30F003E6220 /* ObservationConversionTestConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */; };
 		A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */; };
 		A55FD8D32305A626003E6220 /* StepCountConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */; };
@@ -51,6 +52,7 @@
 		A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMassConversionTests.swift; sourceTree = "<group>"; };
 		A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTemperatureConversionTests.swift; sourceTree = "<group>"; };
 		A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespiratoryRateConversionTests.swift; sourceTree = "<group>"; };
+		A559260E2444D4AA0014A28A /* HeightConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightConversionTests.swift; sourceTree = "<group>"; };
 		A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationConversionTestConfiguration.swift; sourceTree = "<group>"; };
 		A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodGlucoseConversionTests.swift; sourceTree = "<group>"; };
 		A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountConversionTests.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */,
 				A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */,
 				A586893222AB0A2400584468 /* HeartRateConversionTests.swift */,
+				A559260E2444D4AA0014A28A /* HeightConversionTests.swift */,
 				A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */,
 				A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */,
 				A55925D92440CE050014A28A /* OxygenSaturationConversionTests.swift */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A559260F2444D4AA0014A28A /* HeightConversionTests.swift in Sources */,
 				A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */,
 				A5382640233BD03800D454CD /* ObservationFactory.swift in Sources */,
 				A5382642233BD03800D454CD /* DeviceFactory.swift in Sources */,

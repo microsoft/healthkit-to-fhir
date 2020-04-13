@@ -137,9 +137,9 @@
             ]
         },
         "valueQuantity": {
-            "unit" : "lb",
+            "unit" : "kg",
             "system" : "http://unitsofmeasure.org",
-            "code" : "[lb_av]"
+            "code" : "kg"
         }
     },
     "HKQuantityTypeIdentifierBodyTemperature": {
@@ -172,6 +172,22 @@
             "unit" : "count/min",
             "system" : "http://unitsofmeasure.org",
             "code" : "/min"
+        }
+    },
+    "HKQuantityTypeIdentifierHeight" : {
+        "code": {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "8302-2",
+                    "display": "Body height"
+                }
+            ]
+        },
+        "valueQuantity": {
+            "unit" : "cm",
+            "system" : "http://unitsofmeasure.org",
+            "code" : "cm"
         }
     }
 }
