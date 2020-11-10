@@ -16,7 +16,7 @@ steps:
     sdk: 'iphoneos'
     xcWorkspacePath: '**/HealthKitToFhir.xcworkspace'
     scheme: 'HealthKitToFhir_Tests'
-    xcodeVersion: '11'
+    xcodeVersion: '12'
     packageApp: false
     destinationPlatformOption: 'iOS'
-    destinationSimulators: 'iPhone 8'
+    destinationSimulators: 'iPhone 12'
