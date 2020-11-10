@@ -31,6 +31,11 @@ class OxygenSaturationConversionSpec : QuickSpec {
                 expectedCoding2.display = FHIRString("Oxygen saturation in Arterial blood by Pulse oximetry")
                 expectedCoding2.system = FHIRURL("http://loinc.org")
                 
+                let expectedCoding3 = Coding()
+                expectedCoding3.code = FHIRString("HKQuantityTypeIdentifierOxygenSaturation")
+                expectedCoding3.display = FHIRString("Oxygen saturation in Arterial blood by Pulse oximetry")
+                expectedCoding3.system = FHIRURL("com.apple.health")
+                
                 let expectedIdentifier = Identifier()
                 expectedIdentifier.system = FHIRURL("com.apple.health")
                 expectedIdentifier.value = FHIRString(sample.uuid.uuidString)
@@ -40,7 +45,7 @@ class OxygenSaturationConversionSpec : QuickSpec {
                     let observation = try! observationFactory!.observation(from: sample)
                     
                     itBehavesLike("observation resource") { ["observation" : observation,
-                                                             "codings" : [expectedCoding1, expectedCoding2],
+                                                             "codings" : [expectedCoding1, expectedCoding2, expectedCoding3],
                                                              "effectiveDateTime" : expectedDate,
                                                              "identifers" : [expectedIdentifier]]
                     }
@@ -59,7 +64,7 @@ class OxygenSaturationConversionSpec : QuickSpec {
                         let observation: Observation = try! observationFactory!.resource(from: sample)
                         
                         itBehavesLike("observation resource") { ["observation" : observation,
-                                                                 "codings" : [expectedCoding1, expectedCoding2],
+                                                                 "codings" : [expectedCoding1, expectedCoding2, expectedCoding3],
                                                                  "effectiveDateTime" : expectedDate,
                                                                  "identifers" : [expectedIdentifier]]
                         }
@@ -77,8 +82,7 @@ class OxygenSaturationConversionSpec : QuickSpec {
                         context("The incorrect type is used") {
                             it("throws an error") {
                                 expect {
-                                    let observation: Device? = try observationFactory?.resource(from: sample)
-                                    return observation
+                                    let _: Device? = try observationFactory?.resource(from: sample)
                                     }.to(throwError(ConversionError.incorrectTypeForFactory))
                             }
                         }

@@ -19,10 +19,15 @@ class RespiratoryRateConversionSpec : QuickSpec {
                 
                 let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .respiratoryRate)!, quantity: HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: 20), start: expectedDate, end: expectedDate)
                 
-                let expectedCoding = Coding()
-                expectedCoding.code = FHIRString("9279-1")
-                expectedCoding.display = FHIRString("Respiratory rate")
-                expectedCoding.system = FHIRURL("http://loinc.org")
+                let expectedCoding1 = Coding()
+                expectedCoding1.code = FHIRString("9279-1")
+                expectedCoding1.display = FHIRString("Respiratory rate")
+                expectedCoding1.system = FHIRURL("http://loinc.org")
+                
+                let expectedCoding2 = Coding()
+                expectedCoding2.code = FHIRString("HKQuantityTypeIdentifierRespiratoryRate")
+                expectedCoding2.display = FHIRString("Respiratory rate")
+                expectedCoding2.system = FHIRURL("com.apple.health")
                 
                 let expectedIdentifier = Identifier()
                 expectedIdentifier.system = FHIRURL("com.apple.health")
@@ -33,7 +38,7 @@ class RespiratoryRateConversionSpec : QuickSpec {
                     let observation = try! observationFactory!.observation(from: sample)
                     
                     itBehavesLike("observation resource") { ["observation" : observation,
-                                                             "codings" : [expectedCoding],
+                                                             "codings" : [expectedCoding1, expectedCoding2],
                                                              "effectiveDateTime" : expectedDate,
                                                              "identifers" : [expectedIdentifier]]
                     }
@@ -52,7 +57,7 @@ class RespiratoryRateConversionSpec : QuickSpec {
                         let observation: Observation = try! observationFactory!.resource(from: sample)
                         
                         itBehavesLike("observation resource") { ["observation" : observation,
-                                                                 "codings" : [expectedCoding],
+                                                                 "codings" : [expectedCoding1, expectedCoding2],
                                                                  "effectiveDateTime" : expectedDate,
                                                                  "identifers" : [expectedIdentifier]]
                         }
@@ -70,8 +75,7 @@ class RespiratoryRateConversionSpec : QuickSpec {
                         context("The incorrect type is used") {
                             it("throws an error") {
                                 expect {
-                                    let observation: Device? = try observationFactory?.resource(from: sample)
-                                    return observation
+                                    let _: Device? = try observationFactory?.resource(from: sample)
                                 }.to(throwError(ConversionError.incorrectTypeForFactory))
                             }
                         }

@@ -19,10 +19,15 @@ class StepCountConversionSpec : QuickSpec {
                 let expectedEndDate = expectedStartDate.addingTimeInterval(TimeInterval(60))
                 let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .stepCount)!, quantity: HKQuantity(unit: HKUnit(from: "count"), doubleValue: 200), start: expectedStartDate, end: expectedEndDate)
                 
-                let expectedCoding = Coding()
-                expectedCoding.code = FHIRString("55423-8")
-                expectedCoding.display = FHIRString("Number of steps")
-                expectedCoding.system = FHIRURL("http://loinc.org")
+                let expectedCoding1 = Coding()
+                expectedCoding1.code = FHIRString("55423-8")
+                expectedCoding1.display = FHIRString("Number of steps")
+                expectedCoding1.system = FHIRURL("http://loinc.org")
+                
+                let expectedCoding2 = Coding()
+                expectedCoding2.code = FHIRString("HKQuantityTypeIdentifierStepCount")
+                expectedCoding2.display = FHIRString("Number of steps")
+                expectedCoding2.system = FHIRURL("com.apple.health")
                 
                 let expectedIdentifier = Identifier()
                 expectedIdentifier.system = FHIRURL("com.apple.health")
@@ -37,7 +42,7 @@ class StepCountConversionSpec : QuickSpec {
                     let observation = try! observationFactory!.observation(from: sample)
                     
                     itBehavesLike("observation resource") { ["observation" : observation,
-                                                             "codings" : [expectedCoding],
+                                                             "codings" : [expectedCoding1, expectedCoding2],
                                                              "effectivePeriod" : expectedPeriod,
                                                              "identifers" : [expectedIdentifier]]
                     }
@@ -56,7 +61,7 @@ class StepCountConversionSpec : QuickSpec {
                         let observation: Observation = try! observationFactory!.resource(from: sample)
                         
                         itBehavesLike("observation resource") { ["observation" : observation,
-                                                                 "codings" : [expectedCoding],
+                                                                 "codings" : [expectedCoding1, expectedCoding2],
                                                                  "effectivePeriod" : expectedPeriod,
                                                                  "identifers" : [expectedIdentifier]]
                         }
@@ -74,8 +79,7 @@ class StepCountConversionSpec : QuickSpec {
                         context("The incorrect type is used") {
                             it("throws an error") {
                                 expect {
-                                    let observation: Device? = try observationFactory?.resource(from: sample)
-                                    return observation
+                                    let _: Device? = try observationFactory?.resource(from: sample)
                                     }.to(throwError(ConversionError.incorrectTypeForFactory))
                             }
                         }
