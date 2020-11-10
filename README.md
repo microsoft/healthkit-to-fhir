@@ -53,6 +53,15 @@ Additional observation conversions can be added by providing a custom configurat
 - HKQuantityTypeIdentifierBodyTemperature
 - HKQuantityTypeIdentifierRespiratoryRate
 - HKQuantityTypeIdentifierHeight
+- HKQuantityTypeIdentifierRestingHeartRate
+- HKQuantityTypeIdentifierHeartRateVariabilitySDNN
+- HKQuantityTypeIdentifierWalkingHeartRateAverage
+- HKQuantityTypeIdentifierAppleExerciseTime
+- HKQuantityTypeIdentifierAppleStandTime
+- HKQuantityTypeIdentifierActiveEnergyBurned
+- HKQuantityTypeIdentifierEnvironmentalAudioExposure
+- HKQuantityTypeIdentifierSleepAnalysis
+- HKQuantityTypeIdentifierDietaryEnergyConsumed
 
 ### Devices
 
