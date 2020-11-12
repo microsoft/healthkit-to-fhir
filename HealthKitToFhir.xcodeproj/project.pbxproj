@@ -10,6 +10,14 @@
 		A5094B1C23391C6C006264D2 /* FHIR in Frameworks */ = {isa = PBXBuildFile; productRef = A5094B1B23391C6C006264D2 /* FHIR */; };
 		A5094B3723391EC7006264D2 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A5094B3623391EC7006264D2 /* Nimble */; };
 		A5094B3A23391EE1006264D2 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = A5094B3923391EE1006264D2 /* Quick */; };
+		A5326861255B123D00E7B8E7 /* DietaryEnergyConsumedConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5326859255B123C00E7B8E7 /* DietaryEnergyConsumedConversionTests.swift */; };
+		A5326862255B123D00E7B8E7 /* HeartRateVariabilityConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532685A255B123C00E7B8E7 /* HeartRateVariabilityConversionTests.swift */; };
+		A5326863255B123D00E7B8E7 /* RestingHeartRateConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532685B255B123C00E7B8E7 /* RestingHeartRateConversionTests.swift */; };
+		A5326864255B123D00E7B8E7 /* EnvironmentalAudioExposureConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532685C255B123C00E7B8E7 /* EnvironmentalAudioExposureConversionTests.swift */; };
+		A5326865255B123D00E7B8E7 /* ActiveEnergyBurnedConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532685D255B123C00E7B8E7 /* ActiveEnergyBurnedConversionTests.swift */; };
+		A5326866255B123D00E7B8E7 /* AppleStandTimeConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532685E255B123C00E7B8E7 /* AppleStandTimeConversionTests.swift */; };
+		A5326867255B123D00E7B8E7 /* AppleExerciseTimeConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A532685F255B123D00E7B8E7 /* AppleExerciseTimeConversionTests.swift */; };
+		A5326868255B123D00E7B8E7 /* WalkingHeartRateAverageConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5326860255B123D00E7B8E7 /* WalkingHeartRateAverageConversionTests.swift */; };
 		A538263D233BD03800D454CD /* DefaultObservationFactoryConfig.json in Resources */ = {isa = PBXBuildFile; fileRef = A5382631233BD03800D454CD /* DefaultObservationFactoryConfig.json */; };
 		A538263E233BD03800D454CD /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382632233BD03800D454CD /* Configurations.swift */; };
 		A538263F233BD03800D454CD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5382634233BD03800D454CD /* Constants.swift */; };
@@ -39,6 +47,14 @@
 /* Begin PBXFileReference section */
 		607FACE51AFB9204008FA782 /* HealthKitToFhir_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthKitToFhir_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5326859255B123C00E7B8E7 /* DietaryEnergyConsumedConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DietaryEnergyConsumedConversionTests.swift; path = Tests/DietaryEnergyConsumedConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A532685A255B123C00E7B8E7 /* HeartRateVariabilityConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeartRateVariabilityConversionTests.swift; path = Tests/HeartRateVariabilityConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A532685B255B123C00E7B8E7 /* RestingHeartRateConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestingHeartRateConversionTests.swift; path = Tests/RestingHeartRateConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A532685C255B123C00E7B8E7 /* EnvironmentalAudioExposureConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentalAudioExposureConversionTests.swift; path = Tests/EnvironmentalAudioExposureConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A532685D255B123C00E7B8E7 /* ActiveEnergyBurnedConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActiveEnergyBurnedConversionTests.swift; path = Tests/ActiveEnergyBurnedConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A532685E255B123C00E7B8E7 /* AppleStandTimeConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleStandTimeConversionTests.swift; path = Tests/AppleStandTimeConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A532685F255B123D00E7B8E7 /* AppleExerciseTimeConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleExerciseTimeConversionTests.swift; path = Tests/AppleExerciseTimeConversionTests.swift; sourceTree = SOURCE_ROOT; };
+		A5326860255B123D00E7B8E7 /* WalkingHeartRateAverageConversionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkingHeartRateAverageConversionTests.swift; path = Tests/WalkingHeartRateAverageConversionTests.swift; sourceTree = SOURCE_ROOT; };
 		A5382631233BD03800D454CD /* DefaultObservationFactoryConfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultObservationFactoryConfig.json; sourceTree = "<group>"; };
 		A5382632233BD03800D454CD /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		A5382634233BD03800D454CD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -100,18 +116,26 @@
 			isa = PBXGroup;
 			children = (
 				A5D5CB0D23200FCD00532768 /* TestData */,
+				A532685D255B123C00E7B8E7 /* ActiveEnergyBurnedConversionTests.swift */,
+				A532685F255B123D00E7B8E7 /* AppleExerciseTimeConversionTests.swift */,
+				A532685E255B123C00E7B8E7 /* AppleStandTimeConversionTests.swift */,
 				A55FD8D02305A445003E6220 /* BloodGlucoseConversionTests.swift */,
 				A586893422AB194F00584468 /* BloodPressureConversionTests.swift */,
 				A55925DB2440D6C20014A28A /* BodyMassConversionTests.swift */,
 				A55925DD2440D93C0014A28A /* BodyTemperatureConversionTests.swift */,
-				A586893222AB0A2400584468 /* HeartRateConversionTests.swift */,
-				A559260E2444D4AA0014A28A /* HeightConversionTests.swift */,
-				A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */,
-				A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */,
-				A55925D92440CE050014A28A /* OxygenSaturationConversionTests.swift */,
-				A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */,
-				A586892B22AAFB2C00584468 /* ObservationFactoryTests.swift */,
 				A5D5CB0B231ECA0600532768 /* DeviceFactoryTests.swift */,
+				A5326859255B123C00E7B8E7 /* DietaryEnergyConsumedConversionTests.swift */,
+				A532685C255B123C00E7B8E7 /* EnvironmentalAudioExposureConversionTests.swift */,
+				A586893222AB0A2400584468 /* HeartRateConversionTests.swift */,
+				A532685A255B123C00E7B8E7 /* HeartRateVariabilityConversionTests.swift */,
+				A559260E2444D4AA0014A28A /* HeightConversionTests.swift */,
+				A586892B22AAFB2C00584468 /* ObservationFactoryTests.swift */,
+				A55925D92440CE050014A28A /* OxygenSaturationConversionTests.swift */,
+				A55925DF2441180D0014A28A /* RespiratoryRateConversionTests.swift */,
+				A532685B255B123C00E7B8E7 /* RestingHeartRateConversionTests.swift */,
+				A55FD8D22305A626003E6220 /* StepCountConversionTests.swift */,
+				A5326860255B123D00E7B8E7 /* WalkingHeartRateAverageConversionTests.swift */,
+				A55FD8CE2304B30F003E6220 /* ObservationConversionTestConfiguration.swift */,
 				A586893122AB09EB00584468 /* Configs */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -224,7 +248,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
@@ -302,20 +326,28 @@
 				A559260F2444D4AA0014A28A /* HeightConversionTests.swift in Sources */,
 				A55FD8D12305A445003E6220 /* BloodGlucoseConversionTests.swift in Sources */,
 				A5382640233BD03800D454CD /* ObservationFactory.swift in Sources */,
+				A5326861255B123D00E7B8E7 /* DietaryEnergyConsumedConversionTests.swift in Sources */,
 				A5382642233BD03800D454CD /* DeviceFactory.swift in Sources */,
 				A5382641233BD03800D454CD /* ResourceFactoryProtocol.swift in Sources */,
 				A5382644233BD03800D454CD /* ConversionError.swift in Sources */,
 				A55925DA2440CE050014A28A /* OxygenSaturationConversionTests.swift in Sources */,
 				A586893322AB0A2400584468 /* HeartRateConversionTests.swift in Sources */,
+				A5326865255B123D00E7B8E7 /* ActiveEnergyBurnedConversionTests.swift in Sources */,
+				A5326863255B123D00E7B8E7 /* RestingHeartRateConversionTests.swift in Sources */,
+				A5326864255B123D00E7B8E7 /* EnvironmentalAudioExposureConversionTests.swift in Sources */,
 				A55925DC2440D6C20014A28A /* BodyMassConversionTests.swift in Sources */,
 				A586893522AB194F00584468 /* BloodPressureConversionTests.swift in Sources */,
 				A55FD8D32305A626003E6220 /* StepCountConversionTests.swift in Sources */,
 				A586892C22AAFB2C00584468 /* ObservationFactoryTests.swift in Sources */,
 				A5382645233BD03800D454CD /* ConfigurationError.swift in Sources */,
+				A5326867255B123D00E7B8E7 /* AppleExerciseTimeConversionTests.swift in Sources */,
 				A55FD8CF2304B30F003E6220 /* ObservationConversionTestConfiguration.swift in Sources */,
+				A5326866255B123D00E7B8E7 /* AppleStandTimeConversionTests.swift in Sources */,
+				A5326862255B123D00E7B8E7 /* HeartRateVariabilityConversionTests.swift in Sources */,
 				A538263E233BD03800D454CD /* Configurations.swift in Sources */,
 				A55925DE2440D93C0014A28A /* BodyTemperatureConversionTests.swift in Sources */,
 				A5D5CB0C231ECA0600532768 /* DeviceFactoryTests.swift in Sources */,
+				A5326868255B123D00E7B8E7 /* WalkingHeartRateAverageConversionTests.swift in Sources */,
 				A55925E02441180D0014A28A /* RespiratoryRateConversionTests.swift in Sources */,
 				A538263F233BD03800D454CD /* Constants.swift in Sources */,
 				A5382643233BD03800D454CD /* FactoryBase.swift in Sources */,
@@ -348,6 +380,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -373,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,6 +437,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -422,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -505,8 +539,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
-				kind = exactVersion;
-				version = 8.0.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
 			};
 		};
 		A5094B3823391EE1006264D2 /* XCRemoteSwiftPackageReference "Quick" */ = {
@@ -514,7 +548,7 @@
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -19,10 +19,15 @@ class BloodGlucoseConversionSpec : QuickSpec {
                 
                 let sample = HKQuantitySample.init(type: HKQuantityType.quantityType(forIdentifier: .bloodGlucose)!, quantity: HKQuantity(unit: HKUnit(from: "mg/dL"), doubleValue: 90), start: expectedDate, end: expectedDate)
                 
-                let expectedCoding = Coding()
-                expectedCoding.code = FHIRString("41653-7")
-                expectedCoding.display = FHIRString("Glucose Glucometer (BldC) [Mass/Vol]")
-                expectedCoding.system = FHIRURL("http://loinc.org")
+                let expectedCoding1 = Coding()
+                expectedCoding1.code = FHIRString("41653-7")
+                expectedCoding1.display = FHIRString("Glucose Glucometer (BldC) [Mass/Vol]")
+                expectedCoding1.system = FHIRURL("http://loinc.org")
+                
+                let expectedCoding2 = Coding()
+                expectedCoding2.code = FHIRString("HKQuantityTypeIdentifierBloodGlucose")
+                expectedCoding2.display = FHIRString("Glucose Glucometer (BldC) [Mass/Vol]")
+                expectedCoding2.system = FHIRURL("com.apple.health")
                 
                 let expectedIdentifier = Identifier()
                 expectedIdentifier.system = FHIRURL("com.apple.health")
@@ -33,7 +38,7 @@ class BloodGlucoseConversionSpec : QuickSpec {
                     let observation = try! observationFactory!.observation(from: sample)
                     
                     itBehavesLike("observation resource") { ["observation" : observation,
-                                                             "codings" : [expectedCoding],
+                                                             "codings" : [expectedCoding1, expectedCoding2],
                                                              "effectiveDateTime" : expectedDate,
                                                              "identifers" : [expectedIdentifier]]
                     }
@@ -52,7 +57,7 @@ class BloodGlucoseConversionSpec : QuickSpec {
                         let observation: Observation = try! observationFactory!.resource(from: sample)
                         
                         itBehavesLike("observation resource") { ["observation" : observation,
-                                                                 "codings" : [expectedCoding],
+                                                                 "codings" : [expectedCoding1, expectedCoding2],
                                                                  "effectiveDateTime" : expectedDate,
                                                                  "identifers" : [expectedIdentifier]]
                         }
@@ -70,8 +75,7 @@ class BloodGlucoseConversionSpec : QuickSpec {
                         context("The incorrect type is used") {
                             it("throws an error") {
                                 expect {
-                                    let observation: Device? = try observationFactory?.resource(from: sample)
-                                    return observation
+                                    let _: Device? = try observationFactory?.resource(from: sample)
                                     }.to(throwError(ConversionError.incorrectTypeForFactory))
                             }
                         }

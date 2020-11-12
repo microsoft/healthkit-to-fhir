@@ -14,7 +14,7 @@ class ObservationConversionTestConfiguration : QuickConfiguration {
     override class func configure(_ configuration: Configuration) {
         sharedExamples("observation resource") { (sharedExampleContext: @escaping SharedExampleContext) in
             if let observation = sharedExampleContext()["observation"] as? Observation {
-                it("includes the expected loinc codes") {
+                it("includes the expected codes") {
                     if let codings = observation.code?.coding,
                         let expectedCodings = sharedExampleContext()["codings"] as? [Coding] {
                         for coding in expectedCodings {

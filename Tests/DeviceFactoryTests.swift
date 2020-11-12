@@ -122,8 +122,7 @@ class DeviceFactorySpec : QuickSpec {
                 context("with an incorrect type") {
                     it("throws an error") {
                         expect {
-                            let device: Observation? = try deviceFactory.resource(from: self.testObject(with: nil))
-                            return device
+                            let _: Observation? = try deviceFactory.resource(from: self.testObject(with: nil))
                             }.to(throwError(ConversionError.incorrectTypeForFactory))
                     }
                 }
