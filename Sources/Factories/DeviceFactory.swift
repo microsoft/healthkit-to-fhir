@@ -83,7 +83,7 @@ open class DeviceFactory : FactoryBase, ResourceFactoryProtocol {
         
         // Add the operatingSystemVersion from the sourceRevision
         let osVersion = object.sourceRevision.operatingSystemVersion
-        deviceVersions.append(try deviceVersion(version: "\(osVersion.majorVersion).\(osVersion.minorVersion).\(osVersion.minorVersion)", system: Constants.hkObjectSystemValue, code: NSExpression(forKeyPath: \HKObject.sourceRevision.operatingSystemVersion).keyPath))
+        deviceVersions.append(try deviceVersion(version: "\(osVersion.majorVersion).\(osVersion.minorVersion).\(osVersion.patchVersion)", system: Constants.hkObjectSystemValue, code: NSExpression(forKeyPath: \HKObject.sourceRevision.operatingSystemVersion).keyPath))
         
         // Add the version from the sourceRevision
         if let version = object.sourceRevision.version {
